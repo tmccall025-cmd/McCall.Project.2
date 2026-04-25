@@ -99,7 +99,7 @@ void createBinaryFile(string filename)
 			uniform_int_distribution<int>dist(0, 999);
 
 			int foundCount = 0;
-			for (int i = 0; i < 100; ++i);
+			for (int i = 0; i < 100; ++i)
 			{
 				int value = dist(gen);
 				if (binary_search(data, value, size))
