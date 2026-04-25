@@ -1,1 +1,10 @@
+// Helper Functions - //
+// - selection_sort : sorts array of numbers into ascending order //
+// - binary_search_recursive : recursive binary function //
+// - binary_search : helper function to binary_search_recursive //
+// - writeBinary : writes all binary data to file //
+// - createBinaryFile : creates binary file for binary data to be stored in //
 
+// Classes - //
+// Analyzer - store copies of input values
+//          - 
