@@ -6,5 +6,10 @@
 // - createBinaryFile : creates binary file for binary data to be stored in //
 
 // Classes - //
-// Analyzer - store copies of input values
-//          - 
+// Analyzer       - store private copies of input values //
+//                - Constructor copies values to data //
+//                - Destructor deletes data //
+//                - cloneValues returns copied array //
+// SearchAnalyzer - Constructor launches selection_sort //
+//                - selection_sort runs function//
+//                - analyze returns number of successful searches for number in data set//
