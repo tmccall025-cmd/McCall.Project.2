@@ -75,11 +75,18 @@ void createBinaryFile(string filename)
 		Analyzer(int* arr, int size)
 		{
 			this->size = size;
-			data = new int[size];
+			data = cloneValues(arr,size);
 			for (int i = 0; i < size; ++i)
 				data[i] = arr[i];
 		}
-		virtual ~Analyzer()
+		int* cloneValues(int* arr, int size)
+		{
+			int* copy = new int[size];
+		for (int i = 0; i < size; ++i)
+			copy[i] = arr[i];
+			return copy;
+		}
+		~Analyzer()
 		{
 			delete[] data;
 		}
