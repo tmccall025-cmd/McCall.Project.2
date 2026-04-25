@@ -275,7 +275,7 @@ void createBinaryFile(string filename)
 
 		cout << "Duplicates: " << duplicates.analyze() << endl;
 		cout << "Quantity Between 1 and 1000 Not Reflected: " << missing.analyze() << endl;
-		cout << "Repeated Searches: " << search.analyze() << endl;
+		cout << "Searches: " << search.analyze() << endl;
 		cout << "Stats:\n" << stats.analyze() << endl;
 
 		return 0;
