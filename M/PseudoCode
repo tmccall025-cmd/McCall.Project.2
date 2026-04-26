@@ -1,17 +1,4 @@
-// FUNCTIONS - //
-// - selection_sort : //
-// sorts array of numbers into ascending order //
-// - binary_search_recursive : //
-// recursive binary function //
-// - binary_search : //
-// helper function to binary_search_recursive //
-// - writeBinary : //
-// writes all binary data to file //
-// - createBinaryFile : //
-// creates binary file for binary data to be stored in //
-
-// CLASSES - //
-// Analyzer //
+//CLASS Analyzer //
 //   PRIVATE: //
 //     data //
 //     size //
@@ -25,7 +12,8 @@
 //      DESTRUCTOR //
 //        delete data //
 //       ABSTRACT FUNCTION analyze () //
-// SearchAnalyzer INHERITS Analyzer //
+// END CLASS //
+// CLASS SearchAnalyzer INHERITS Analyzer //
 //   PUBLIC: //
 //     CONSTRUCTOR SearchAnalyzer(arr, size)
 //       call base Analyzer constructor //
@@ -36,6 +24,19 @@
 //       generate random number from 0 to 999 /
 //       if binary search finds number in data increment findCount //
 //     RETURN foundCount as string //
-// StatisticsAnalyzer INHERITS Analyzer //
+// END CLASS //
+// CLASS StatisticsAnalyzer INHERITS Analyzer //
 //   PUBLIC: //
-//     CONSTRUCTOR StatisticsAnalyzer(arr, size)
+//     CONSTRUCTOR StatisticsAnalyzer(arr, size)  //
+//       call base Analyzer constructor //
+//     FUNCTION analyze //
+//       sort data //
+//       minimum = first value //
+//       maximum = last value //
+//       median = middle value or average of two middle values //
+//       mode = most frequent value //
+//       RETURN formatted string with min, max, median, mode //
+// END CLASS//
+// CLASS DuplicatesAnalyzer INHERITS Analyzer //
+//   PUBLIC: //
+//     CONSTRUCTOR DuplicatesAnalyzer
