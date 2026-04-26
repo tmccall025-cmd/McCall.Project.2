@@ -1,16 +1,41 @@
-// Helper Functions - //
-// - selection_sort : sorts array of numbers into ascending order //
-// - binary_search_recursive : recursive binary function //
-// - binary_search : helper function to binary_search_recursive //
-// - writeBinary : writes all binary data to file //
-// - createBinaryFile : creates binary file for binary data to be stored in //
+// FUNCTIONS - //
+// - selection_sort : //
+// sorts array of numbers into ascending order //
+// - binary_search_recursive : //
+// recursive binary function //
+// - binary_search : //
+// helper function to binary_search_recursive //
+// - writeBinary : //
+// writes all binary data to file //
+// - createBinaryFile : //
+// creates binary file for binary data to be stored in //
 
-// Classes - //
-// Analyzer       - store private copies of input values //
-//                - Constructor copies values to data //
-//                - Destructor deletes data //
-//                - cloneValues returns copied array //
-// SearchAnalyzer - Constructor launches selection_sort //
-//                - selection_sort runs function//
-//                - analyze returns number of successful searches for number in data set//
-
+// CLASSES - //
+// Analyzer //
+//   PRIVATE: //
+//     data //
+//     size //
+//    PUBLIC: //
+//     CONSTRUCTOR Analyze (arr, size) //
+//       set size //
+//       copy values into data //
+//      FUNCTION cloneValues (arr, size) //
+//        create new array copy //
+//        return copied array //
+//      DESTRUCTOR //
+//        delete data //
+//       ABSTRACT FUNCTION analyze () //
+// SearchAnalyzer INHERITS Analyzer //
+//   PUBLIC: //
+//     CONSTRUCTOR SearchAnalyzer(arr, size)
+//       call base Analyzer constructor //
+//       sort data //
+//   FUNCTION analyze() //
+//     set foundCount to 0 //
+//     REPEAT 100 times //
+//       generate random number from 0 to 999 /
+//       if binary search finds number in data increment findCount //
+//     RETURN foundCount as string //
+// StatisticsAnalyzer INHERITS Analyzer //
+//   PUBLIC: //
+//     CONSTRUCTOR StatisticsAnalyzer(arr, size)
