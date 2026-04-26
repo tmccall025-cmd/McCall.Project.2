@@ -261,7 +261,7 @@ void createBinaryFile(string filename)
 		{
 			ifstream in(filename, ios::binary);
 			in.read(reinterpret_cast<char*>(&size), sizeof(size));
-			values = new int[size];
+			arr = new int[size];
 			in.read(reinterpret_cast<char*>(arr), sizeof(int) * size);
 			in.close();
 		}
