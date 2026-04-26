@@ -281,8 +281,8 @@ void createBinaryFile(string filename)
 		StatisticsAnalyzer stats(data, size);
 
 		cout << "Duplicates: " << duplicates.analyze() << endl;
-		cout << "Quantity Between 1 and 1000 Not Reflected: " << missing.analyze() << endl;
-		cout << "Successful Values in Array: " << search.analyze() << endl;
+		cout << "Quantity Between 0 and 999 Not Reflected: " << missing.analyze() << endl;
+		cout << "Successful Values Found in Data Sample: " << search.analyze() << endl;
 		cout << "Stats:\n" << stats.analyze() << endl;
 
 		return 0;
