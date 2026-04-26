@@ -46,11 +46,11 @@ bool binary_search(int* arr, int key, int size)
 {
 	return binary_search_recursive(arr, key, 0, size - 1);
 }
-void writeBinary(string filename, int* values, int length)
+void writeBinary(string filename, int* arr, int length)
 {
 	ofstream out(filename, ios::binary);
 	out.write(reinterpret_cast<char*>(&length), sizeof(length));
-	out.write(reinterpret_cast<char*>(values), sizeof(int) * length);
+	out.write(reinterpret_cast<char*>(arr), sizeof(int) * length);
 	out.close();
 }
 void createBinaryFile(string filename)
@@ -177,7 +177,7 @@ void createBinaryFile(string filename)
 	{
 
 	public:
-		DuplicatesAnalyzer(int* values, int size) : Analyzer(values, size) {}
+		DuplicatesAnalyzer(int* arr, int size) : Analyzer(arr, size) {}
 		string analyze() override
 		{
 			int duplicateCount = 0;
@@ -211,7 +211,7 @@ void createBinaryFile(string filename)
 	class MissingAnalyzer : public Analyzer
 	{
 	public:
-		MissingAnalyzer(int* values, int size) : Analyzer(values, size) {}
+		MissingAnalyzer(int* arr, int size) : Analyzer(arr, size) {}
 		string analyze() override
 		{
 			int missingCount = 0;
@@ -236,22 +236,22 @@ void createBinaryFile(string filename)
 	class BinaryReader 
 	{
 	private:
-		int* values;
+		int* arr;
 		int size;
 	public:
 		BinaryReader(string filename)
 		{
-			values = nullptr;
+			arr = nullptr;
 			size = 0;
 			readValues(filename);
 		}
 		~BinaryReader()
 		{
-			delete[] values;
+			delete[] arr;
 		}
 		int* getValues()
 		{
-			return values;
+			return arr;
 		}
 		int getSize()
 		{
@@ -262,7 +262,7 @@ void createBinaryFile(string filename)
 			ifstream in(filename, ios::binary);
 			in.read(reinterpret_cast<char*>(&size), sizeof(size));
 			values = new int[size];
-			in.read(reinterpret_cast<char*>(values), sizeof(int) * size);
+			in.read(reinterpret_cast<char*>(arr), sizeof(int) * size);
 			in.close();
 		}
 
