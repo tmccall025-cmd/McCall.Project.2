@@ -42,9 +42,9 @@ bool binary_search_recursive(int* arr, int value, int start, int end)
 	else
 		return binary_search_recursive(arr, value, mid + 1, end);
 }
-bool binary_search(int* values, int key, int size)
+bool binary_search(int* arr, int key, int size)
 {
-	return binary_search_recursive(values, key, 0, size - 1);
+	return binary_search_recursive(arr, key, 0, size - 1);
 }
 void writeBinary(string filename, int* values, int length)
 {
@@ -119,7 +119,7 @@ void createBinaryFile(string filename)
 	class StatisticsAnalyzer : public Analyzer
 	{
 		public:
-		StatisticsAnalyzer(int* values, int size) : Analyzer(values, size) {}
+		StatisticsAnalyzer(int* arr, int size) : Analyzer(arr, size) {}
 		string analyze() override;
 
 	};
