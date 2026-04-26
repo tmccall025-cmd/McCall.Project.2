@@ -39,4 +39,72 @@
 // END CLASS//
 // CLASS DuplicatesAnalyzer INHERITS Analyzer //
 //   PUBLIC: //
-//     CONSTRUCTOR DuplicatesAnalyzer
+//     CONSTRUCTOR DuplicatesAnalyzer (arr, size) //
+//       call base Analyzer constructor //
+//     FUNCTION analyze //
+//       set duplicateCount to 0 //
+//       FOR each item in data //
+//         if this value appears later in the array //
+//           count it as a duplicate once //
+//       RETURN duplicateCount as string //
+// END CLASS//
+// CLASS MissingAnalyzer INHERITS Analyzer //
+//   PUBLIC: //
+//     CONSTRUCTOR MissingAnalyzer (arr, size) //
+//       call base Analyzer constructor //
+//     FUNCTION analyze () //
+//       set missingCount to 0 //
+//       FOR each number from 0 to 999 //
+//         if number is not in data //
+//           increment missingCount //
+//       RETURN missingCount as string //
+// END CLASS //
+// CLASS BinaryReader //
+//   PRIVATE: //
+//     arr //
+//     size //
+//   PUBLIC: //
+//     CONSTRUCTOR BinaryReader(filename) //
+//       read binary file //
+//       load size //
+//       load arr into memory //
+//      DESTRUCTOR //
+//        delete arr //
+//      FUNCTION getValues()
+//       return arr //
+//      FUNCTION getSize() //
+//       return size //
+//      FUNCTION readValues(filename) //
+//       open file //
+//       read size //
+//       allocate memory //
+//       read integers into array //
+// END CLASS //
+
+// FUNCTION selection_sort (arr, size) //
+//   FOR each position from the first to penultimate //
+//    find smallesst value in unsorted part //
+//     swap it into current position //
+// FUNCTION binary_search_recursive (arr, key, start, end) //
+//   if start is greater than end //
+//     return false //
+//   check middle element //
+//   if middle equals key //
+//     return true //
+//   if key is smaller //
+//     search left half //
+//   else //
+//     search right half //
+// FUNCTION binary_search(arr, key, size) //
+//   call binary_search_recursive with full range //
+//   return result //
+// FUNCTION writeBinaryFile (filename, arr, length) //
+//   open binary file for writing //
+//   write legnth first //
+//   wwrite all integers //
+// FUNCTION createBinaryFile (filename) //
+//   generate 50 random integers from 0 to 999 //
+//   write them to file using writeBinary //
+// END FUNCTION //
+// MAIN //
+// executes all helper functions and displays result. takes in no user input. //
