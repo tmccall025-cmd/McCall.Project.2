@@ -100,7 +100,7 @@
 //   return result //
 // FUNCTION writeBinaryFile (filename, arr, length) //
 //   open binary file for writing //
-//   write legnth first //
+//   write length first //
 //   wwrite all integers //
 // FUNCTION createBinaryFile (filename) //
 //   generate 50 random integers from 0 to 999 //
