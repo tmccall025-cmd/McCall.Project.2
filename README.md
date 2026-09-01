@@ -5,4 +5,4 @@ processes through four separate analyzer classes to print the following informat
 -numbers from 0-999 not included in the data file
 -random search results
 -minimum, maximum, median and mode
-All work presented is my own.
+All work presented is my own. Any contributions from anyone else has been removed for academic integrity.
